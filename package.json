@@ -1,0 +1,60 @@
+{
+  "name": "my_package_name",
+  "author": "Your name <yourmail@mail.com> (https://github.com/[USERNAME])",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Your package description",
+  "contributors": [
+    {
+      "name": "Your name",
+      "email": "yourmail@mail.com"
+    }
+  ],
+  "keywords": [
+    "some",
+    "keywords",
+    "here"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/[USERNAME]/my_package_name.git"
+  },
+  "homepage": "https://[USERNAME].github.io/my_package_name/",
+  "bugs": {
+    "url": "https://github.com/[USERNAME]/my_package_name/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/my_package_name.umd.cjs",
+  "module": "./dist/my_package_name.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my_package_name.js",
+      "require": "./dist/my_package_name.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/types.d.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run test && vite build --mode production && npm run generate:types && npm run build:live-demo",
+    "build:lib": "npm run test && vite build --mode production && npm run generate:types",
+    "clean": "rm -rf ./dist && rm -rf ./live-demo && rm -rf ./coverage",
+    "coverage:web":"http-server ./coverage",
+    "build:live-demo": "vite build --mode live-demo --outDir ./live-demo",    
+    "generate:types": "tsc -p tsconfig-build.json --declaration --emitDeclarationOnly true --outdir ./dist",
+    "changeset": "changeset",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run  --coverage"    
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@vitest/coverage-v8": "^0.34.6",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vitest": "^0.34.6"
+  }
+}
