@@ -12,7 +12,7 @@ dist
 live-demo
 dist-ssr
 *.local
-package-lock.json
+
 
 coverage
 
