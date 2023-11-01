@@ -31,11 +31,12 @@
   "exports": {
     ".": {
       "import": "./dist/my_package_name.js",
-      "require": "./dist/my_package_name.umd.cjs"
+      "require": "./dist/my_package_name.umd.cjs",
+      "types": "./dist/index.d.ts"
     },
     "./style.css": "./dist/style.css"
   },
-  "types": "./dist/types.d.ts",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
