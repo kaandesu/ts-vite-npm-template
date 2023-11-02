@@ -15,7 +15,7 @@
   <h3 align="center">Complete Typescript NPM Package Template</h3>
    <!-- DESCRIPTION -->
   <p align="center">
-    An ultimate template for creating a Typescript NPM package with Vite, that can build a live-demo, make unit tests and coverage with vitest, and built-int deploy/build github workflows. + README template
+    An all-in-one solution for crafting TypeScript-based NPM packages with Vite, complete with built-in GitHub Pages live-demo deployment, automated test-and-build workflows, and Vite-powered unit test configuration, including coverage analysis and a README.md template for your package.
     <br />        
     <br />
     <!-- CHANGER IT WITH YOUR GITHUB PAGES LINK -->
@@ -41,29 +41,32 @@
   </ol>
 </details>
 
+<br>
 <!-- GETTING STARTED -->
 
-> ⚠️ This README.md mainly contains information about how to setup [project](#project-setup) and the [repository/automation](#repository-and-automation-setup). 
-<br> However, it is mainly made for users to use this as a template to `create their own README`.
-Feel free to edit this README.md to your needs. 
+> [!NOTE]
+> This README.md mainly contains information about how to setup the [project](#project-setup) and the [repository/automation](#repository-and-automation-setup). 
+>  However, it is also made for users to use this README as a template as well. 
+>  So, it is highly recommended to edit this README.md file to make it your own.
+> For feature requests, don't hesitate to open an [issue](https://github.com/kaandesu/ts-vite-npm-template/issues/new)!
 
 
 ## Project Setup
 1. **_Package Name Setup:_** Change the package name (every occurrence) in `package.json` and `vite.config.ts` files.
 
-2. **_Write your plguin:_** Write your plugin in `src/myPackagePlugin` folder. As a default entry will be from its `index.ts` file. 
-You may change the folder name or the entry file, but don't forget to update the `vite.config.ts` file.
+2. **_Write your plugin:_** Start writing your plugin in the `src/myPackagePlugin` folder. As a default, entry will be from its `index.ts` file. 
+You may change the folder name and/or the entry file name, but don't forget to update the `vite.config.ts` file accordingly.
 
 3. **_ChangesetBot_**: Add Changeset Bot and configure. (See [Changeset Bot](https://github.com/apps/changeset-bot) for details) 
 
 
 ## Repository and Automation Setup
 
-1. **_Allow Workflows for Automation_**: Visit `https://github.com/[username]/[REPOSITORY]/settings/actions` and add workflow permissions (read & write)..
+1. **_Workflow Permissions for Automation_**: Visit `https://github.com/[username]/[REPOSITORY]/settings/actions` and add workflow permissions (read & write)..
 
-2. **_Enable Github Pages:_** If you have a live-demo web, create a new branch called 'gh-pages' for github pages deployment. (The index.html will be built and deployed to this branch seperately from your plugin build. See [deploy.yaml](.github/workflows/deploy.yaml) workflow)
+2. **_Enable Github Pages:_** If you have a live-demo to showcase your package, create a new branch called 'gh-pages' for github pages deployment. (The index.html will be built and deployed to this branch seperately from your plugin build. See [deploy.yaml](.github/workflows/deploy.yaml) workflow, delete the file if you don't need it.)
 
-3. **_Branch Security Rules:_** Visit `https://github.com/[username]/[REPOSITORY]/settings/branches` and set the branch protection rules for `main` and `gh-pages` branches. (Require pull request reviews before merging, Require status checks to pass before merging, Require branches to be up to date before merging)
+3. **_Branch Security Rules:_** Visit `https://github.com/[username]/[REPOSITORY]/settings/branches` and set the branch protection rules for `main` and `gh-pages` branches. (Requiring pull request reviews before merging to main branch is highly recommended.)
 
 4. **_Codeowners_**: Edit the codeowners file to add your team members as codeowners. (See [CODEOWNERS](CODEOWNERS) for details)
 
@@ -81,13 +84,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 > For user to edit this section:
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-  - [ ] Chinese
-  - [ ] Spanish
+- [x] Add vite configuration
+- [x] Add vitest
+- [x] Add workflows
+- [ ] Add vitepress documentation
+- [ ] Some other stuff
+  - [ ] Stuff 1
+  - [ ] Stuff 2
 
 
 <!-- CONTRIBUTING -->
