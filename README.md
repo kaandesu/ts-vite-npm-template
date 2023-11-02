@@ -33,6 +33,7 @@
   <ol>    
     <li><a href="#project-setup">Project Setup</a></li>
     <li><a href="#repository-and-automation-setup">Repository and Automation Setup</a></li>
+    <li><a href="#publishing-to-npm">Publishing to NPM</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -69,6 +70,37 @@ You may change the folder name and/or the entry file name, but don't forget to u
 3. **_Branch Security Rules:_** Visit `https://github.com/[username]/[REPOSITORY]/settings/branches` and set the branch protection rules for `main` and `gh-pages` branches. (Requiring pull request reviews before merging to main branch is highly recommended.)
 
 4. **_Codeowners_**: Edit the codeowners file to add your team members as codeowners. (See [CODEOWNERS](CODEOWNERS) for details)
+
+## Publishing to NPM
+> Don't forget to update the version number in `package.json` before publishing or use changeset-bot to update version number.
+
+Before publishing test your package, it is recommended to test it locally. First build your package with `npm run build` and create a symbolic link. <br>
+
+1. Navigate to your package's root directory
+```bash
+npm link
+```
+
+2. Switch to the project where you want to test your package locally
+```bash
+cd your-test-project-directory
+npm link your-package-name
+```
+
+> [!NOTE]
+> `npm link` creates a symbolic link between your package and your test project. So if you build your package again, it will be reflected in your test project as well.
+
+3. Ensure that your package version in `package.json` adheres to semantic versioning
+4. Log in to your NPM account 
+```bash
+npm login
+```
+5. Run the following command to publish your package
+```bash
+npm publish
+```
+
+Congratulations! Your package is now published to npm 🎉 <br>
 
 <!-- USAGE EXAMPLES -->
 
