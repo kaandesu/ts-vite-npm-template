@@ -13,6 +13,11 @@ export default defineConfig(({ mode }) => {
           '~': resolve(__dirname, 'src', 'myPackagePlugin'),
         },
       },
+      build: {
+        rollupOptions: {
+          input: ['index.html'],
+        },
+      },
     }
   } else {
     return {
