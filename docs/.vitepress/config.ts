@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'TS npm template',
   description: 'Vitepress documentation example for ts-vite-npm-template repository',
   lang: 'en-US',
+  base: '/ts-vite-npm-template/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.webp',
