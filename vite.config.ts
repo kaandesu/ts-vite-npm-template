@@ -4,7 +4,7 @@ import { resolve } from 'path'
 export default defineConfig(({ mode }) => {
   if (mode === 'live-demo') {
     return {
-      base: './ts-vite-npm-template/',
+      base: './',
       test: {
         globals: true,
       },
